@@ -3,15 +3,22 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from "react-router-dom";
+import "./Navbar.scss";
+
 const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
         <div className="left">
           <div className="country">
-            <img src="../../../public/assets/india.png" alt="country image" />
+            <img
+              src="../../../public/assets/india.webp"
+              height={20}
+              width={20}
+              alt="country image"
+            />
             <KeyboardArrowDownIcon />
           </div>
           <div className="nav-item">
@@ -56,19 +63,22 @@ const Navbar = () => {
               Stores
             </Link>
           </div>
-          <div className="nav-item icon">
-            <SearchIcon />
-          </div>
-          <div className="nav-item icon">
-            <PersonOutlineIcon />
-          </div>-------start fropm 19:07.00
-          <div className="nav-item icon">
-            <FavoriteBorderIcon />
-          </div>
-          <div className="nav-item icon">
-            <Link className="link" to="/cart">
-              <ShoppingCartIcon />
-            </Link>
+          <div className="icons">
+            <div className="nav-item icon">
+              <SearchIcon />
+            </div>
+            <div className="nav-item icon">
+              <PersonOutlineIcon />
+            </div>
+            <div className="nav-item icon">
+              <FavoriteBorderIcon />
+            </div>
+            <div className="nav-item icon cart-icon">
+              <Link className="link" to="/cart">
+                <ShoppingCartOutlinedIcon />
+                <span>0</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
